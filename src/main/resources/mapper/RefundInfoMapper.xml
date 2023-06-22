@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.wechatpaymentdemo.mapper.RefundInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.wechatpaymentdemo.model.entity.RefundInfo">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="orderNo" column="order_no" jdbcType="VARCHAR"/>
+            <result property="refundNo" column="refund_no" jdbcType="VARCHAR"/>
+            <result property="refundId" column="refund_id" jdbcType="VARCHAR"/>
+            <result property="totalFee" column="total_fee" jdbcType="INTEGER"/>
+            <result property="refund" column="refund" jdbcType="INTEGER"/>
+            <result property="reason" column="reason" jdbcType="VARCHAR"/>
+            <result property="refundStatus" column="refund_status" jdbcType="VARCHAR"/>
+            <result property="contentReturn" column="content_return" jdbcType="VARCHAR"/>
+            <result property="contentNotify" column="content_notify" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,order_no,refund_no,
+        refund_id,total_fee,refund,
+        reason,refund_status,content_return,
+        content_notify,create_time,update_time
+    </sql>
+</mapper>
